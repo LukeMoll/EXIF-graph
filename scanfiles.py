@@ -14,10 +14,7 @@ def get_date(path_name):
     # Return Exif tags
     tags = exifread.process_file(f)
     date = tags.get('Image DateTimeOriginal')
-    return None if date is None else dateutil.parser.parse(str(date))
-
-# https://matplotlib.org/examples/api/date_demo.html
-
+    return None if date is None else dateutil.parser.parse(str(date)
 
 
 regex = re.compile(r'.+\.nef$', flags=re.IGNORECASE)
